@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<title>MO-MO-TOUN</title>
+        <link href="style.css" rel="stylesheet">
+		    <link href="home.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    </head>
+    <body>
+        <header>
+            <h1>MO-MO-TOWN　</h1>
+            <div class = "hamburger-menu">
+                <input type = "checkbox" id = "menu-btn-check">
+                <label for = "menu-btn-check" class = "menu-btn"><span></span></label>
+                <!--カテゴリー表-->
+                <div class = "menu-content">
+                    <u1>
+                        <li>
+                            <a href = "#">文学・小説</a>
+                        </li>
+                        <li>
+                            <a href = "#">社会・ビジネス</a>
+                        </li>
+                        <li>
+                            <a href = "#">旅行・地図</a>
+                        </li>
+                        <li>
+                            <a href = "#">趣味・実用</a>
+                        </li>
+                        <li>
+                            <a href = "#">教育・語学</a>
+                        </li>
+                        <li>
+                            <a href = "#">アート・ファッション</a>
+                        </li>
+                        <li>
+                            <a href = "#">辞典・図鑑・辞書</a>
+                        </li>
+                        <li>
+                            <a href = "#">絵本・児童書</a>
+                        </li>
+                    </u1>
+                </div>
+            </div>
+            <div class="header-inner">
+                <form>
+                  <input type="text" placeholder="タイトル　作者名　出版社">
+                  <button class="form-button"><img src="sicon.png" width="20px" height="20px"></button>
+                </form>
+              </div>
+            <nav class = "gnav">
+                <u1 class = "menu">
+                    <li><a href = "file:///F:/HTML/MO-MO-TOWN/login.html">
+                        <button><img src="login.png" width="20px" height="20px"></button>
+                    </a></li>
+                    <li><a href = "file:///F:/HTML/MO-MO-TOWN/cart.html">
+                        <button><img src="shop_cart.png" width="20px" height="20px"></button>
+                    </a></li>
+                    <li><a href = "file:///F:/HTML/MO-MO-TOWN/history.html">
+                        <button><img src="history.png" width="20px" height="20px"></button>
+                    </a></li>
+                </u1>
+            </nav>
+        </header>
+        <main>
+          <ul class="slider">
+            <li><img src="img/img_01.jpg" alt=""></li>
+            <li><img src="img/img_02.jpg" alt=""></li>
+            <li><img src="img/img_03.jpg" alt=""></li>
+            <li><img src="img/img_04.jpg" alt=""></li>
+            <li><img src="img/img_05.jpg" alt=""></li>
+            <!--/slider--></ul>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script>
+              	$('.slider').slick({
+                  autoplay: true,//自動的に動き出すか。初期値はfalse。
+                  infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+                  speed: 500,//スライドのスピード。初期値は300。
+                  slidesToShow: 3,//スライドを画面に3枚見せる
+                  slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
+                  prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
+                  nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
+                  centerMode: true,//要素を中央ぞろえにする
+                  variableWidth: true,//幅の違う画像の高さを揃えて表示
+                  dots: true,//下部ドットナビゲーションの表示
+                });
+            </script>
+          </main>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+body{
+    padding-top: 90px;/*ヘッダーの後ろに要素が隠れないようにする*/
+}
+h1{
+    text-shadow: #fff 2px 0, #fff -2px 0, #fff 0 2px, #fff 2px 2px, #fff -2px 2px, #fff 2px -2px, #fff -2px -2px, #fff 1px 2px, #fff -1px 2px, #fff 1px -2px, #fff -1px -2px, #fff 2px 1px, #fff -2px 1px, #fff 2px -1px, #fff -2px -1px, rgba(0,0,0, .5) 3px 3px 3px;
+}
+header{
+    width: 100%;/*幅いっぱいを指定する*/
+    height: 70px;/*高さを50pxに指定する*/
+    padding: 20px 50px;/*ヘッダーに上下左右それぞれ余白を指定する*/
+    box-sizing:border-box;/*padding文を含んで幅を100％にする*/
+    position: fixed;/*ウィンドウを基準に画面に固定*/
+    top: 0px;/*上下の固定位置を上から0pxにする*/
+    left: 0px;/*左右の固定位置を左から0pxにする*/
+    display: flex;/*中の要素を横並びにする*/
+    align-items: center;/*中の要素を上下中央に並べる*/
+    background-image: url(F:/HTML/MO-MO-TOWN/title-background.jpg);
+    z-index: 100;
+}
+header .gnav .menu{
+    display: flex;/*中の要素を横並びにする*/
+}
+header .menu li{
+    list-style: none;/*リストの「・」を消す*/
+}
+
+header .menu li + li{
+    margin-left: 40px;/*メニューそれぞれに間隔をあける*/
+}
+header nav{
+    margin-left: auto;
+    margin-right: 30px;
+}
+.header-inner form input {
+    width: 300px;
+    height: 100%;
+    display: block;
+    padding: 0px 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .header-inner form input::placeholder {
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
+  }
+  .header-inner form {
+    display: block;
+    position: relative;
+    height: 40px;
+  }
+  .header-inner form button {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    font-size: 15px;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    background: transparent;
+    color:#999;
+
+  }
+.menu button{
+    border: none;
+    outline: none;
+    background: #ffffff;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    line-height: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+main {
+    height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
+}
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width:94%;
+  margin:0 auto;
+  z-index: 10;
+}
+
+.slider img {
+  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height:auto;
+}
+
+.slider .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;/*矢印の色*/
+  border-right: 2px solid #666;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align:center;
+margin:20px 0 0 0;
+}
+
+.slick-dots li {
+  display:inline-block;
+margin:0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:8px;/*ドットボタンのサイズ*/
+  height:8px;/*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
+}
